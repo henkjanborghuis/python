@@ -1,20 +1,19 @@
-# TODO Create an empty list to maintain the player names
+players = []
+number_of_players = 0
 
+print("Enter the name of the player you want to add to the team.\nSay 'done' when finished adding users.\n")
 
-# TODO Ask the user if they'd like to add players to the list.
-# If the user answers "Yes", let them type in a name and add it to the list.
-# If the user answers "No", print out the team 'roster'
+while True:
+    player = input("Who do you want to add to the team?   ")
+    if player != 'done':
+        players.append(player)
+    else:
+        print("\nThere are {} players on the team.".format(len(players)))
+        for player in players:
+            number_of_players += 1
+            print("{}. {}".format(number_of_players, player))
+        break
 
-
-# TODO print the number of players on the team
-
-
-# TODO Print the player number and the player name
-# The player number should start at the number one
-
-
-# TODO Select a goalkeeper from the above roster
-
-
-# TODO Print the goal keeper's name
-# Remember that lists use a zero based index
+goalkeeper = input("Select the goalkeeper by choosing a players number.   ")
+goalkeeper = int(goalkeeper)
+print("{} is the goalkeeper".format(players[goalkeeper - 1]))
