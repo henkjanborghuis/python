@@ -1,10 +1,7 @@
-def is_odd(value):
-    if value % 2 == 0:
-        print(False)
-    else:
-        print(True)
-    return
+from trying import Inventory, SortedInventory
 
-value = int(input("What is the value    "))
-
-is_odd(value)
+list = SortedInventory()
+list.add_item('book')
+list.add_item('apple')
+list.add_item('CookBook')
+print(list.slots)
